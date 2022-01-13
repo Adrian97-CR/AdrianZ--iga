@@ -13,7 +13,7 @@ export const ShakeTitle = ({title}) => {
         return () => {
             clearTimeout(timer);
         }
-    }, [])
+    }, [dispatch])
 
     const getLetters = ( word, i) => (
             word.split('').map((l, j) => (
@@ -48,7 +48,6 @@ export const ShakeTitle = ({title}) => {
                 )
                 if ( i+2 < title.length) {
                     i += 2;
-                    console.log(title[i]);
                     Letters.push(getLetters(title[i], i))
                 }
                 shakeTitle.push(<div key={i} className='concatRow' >{Letters}</div>)

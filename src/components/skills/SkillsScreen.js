@@ -1,8 +1,8 @@
 import React from 'react'
 
-export const SkillsScreen = () => {
+export const SkillsScreen = ( ) => {
     return (
-        <div>
+        <div> 
             <h1>SkillsScreen</h1>
             <hr/>
         </div>

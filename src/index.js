@@ -4,8 +4,6 @@ import { PortafolioApp } from './PortafolioApp';
 import './styles/styles.scss'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <PortafolioApp />
-  </React.StrictMode>,
+    <PortafolioApp />,
   document.getElementById('root')
 );
