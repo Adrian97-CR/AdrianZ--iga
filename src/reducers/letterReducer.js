@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
 import { types } from "../types/types";
 
 
 const initialState = {
-    id:''
+    id:'',
+    reload: true
 }
 
 export const letterReducer = (state = initialState, action) => {
@@ -12,7 +12,13 @@ export const letterReducer = (state = initialState, action) => {
             return {
                 ...state,
                 id:action.payload
-            }    
+            }
+        case types.setReloadingScreen:
+            console.log(state.reload);
+            return {
+                ...state,
+                reload:!state.reload
+            }
         default:
             return state;
     }
