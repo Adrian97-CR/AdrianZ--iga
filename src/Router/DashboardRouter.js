@@ -4,22 +4,28 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { AboutScreen } from '../components/about/AboutScreen'
 import { ContactScreen } from '../components/contact/ContactScreen'
 import { SkillsScreen } from '../components/skills/SkillsScreen'
-import { Navbar } from '../components/ui/Navbar'
+import { NavbarP } from '../components/ui/NavbarP'
 import { WorkScreen } from '../components/work/WorkScreen'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { changeIndexByScroll } from '../actions/scrollIndex'
+import { Sidebar } from '../components/ui/Sidebar'
+import { FavSideBar } from '../components/ui/FavSideBar'
+
 
 export const DashboardRouter = () => {
 		const loc = useLocation();
 		const nav = useNavigate()
-		const { route } = useSelector(state => state.scroll)
+		const { scroll, sideB } = useSelector(state => state)
+		const route = scroll.route;
+		const show = sideB.show;
 		const dispatch = useDispatch();
 		const handleScrollEvent = (e) => {
+
 			dispatch(changeIndexByScroll(e, loc.pathname));
 		}
 
 		useEffect(() => {
-			nav(`${route}`)
+			!show&&nav(`${route}`,{replace:true})
 		}, [route])
 
 		return (
@@ -33,7 +39,7 @@ export const DashboardRouter = () => {
 							height: "100vh"
 						}}
 						> 
-						<Navbar hide/>
+						<Sidebar />
 						<div className="container">
 							<Routes>
 								<Route path="about" element={<AboutScreen  />} />
@@ -44,7 +50,8 @@ export const DashboardRouter = () => {
 								<Route path="/" element={<AboutScreen />} />
 							</Routes>
 						</div>
-        	</ReactScrollWheelHandler>
+						<FavSideBar />
+					</ReactScrollWheelHandler>
 				</> 
 		)
 }

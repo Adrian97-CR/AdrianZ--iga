@@ -1,5 +1,7 @@
 //@import 'animete.css'
 @import './base/base';
+@import './text/test';
+@import './components/sidebar';
 
 .tadaLetter {
     font-size: 500%;
@@ -38,10 +40,14 @@
 }
 
 .fab {
-    border-radius: 100%;
-    bottom: 25px;
+    box-shadow: 0;
+    background-color: black;
+    color: blanchedalmond;
+    border-radius: 25%;
+    top: 25px;
     font-size: 30px;
-    padding: 25px;
+    padding: 15px;
     position: fixed;
     right: 25px;
+    z-index: 1;
 }

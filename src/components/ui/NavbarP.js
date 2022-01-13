@@ -1,7 +1,8 @@
 import React from 'react'
+
 import { Link, NavLink, useNavigate, Navigate } from 'react-router-dom'
 
-export const Navbar = () => {
+export const NavbarP = () => {
     const navigate = useNavigate()
     if (false) {
         return <Navigate to="/login"/>
