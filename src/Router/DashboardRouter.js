@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { AboutScreen } from '../components/about/AboutScreen'
@@ -15,19 +15,19 @@ import { HomeScreen } from '../components/home/HomeScreen'
 
 export const DashboardRouter = () => {
 		const loc = useLocation();
-		const nav = useNavigate()
 		const { scroll, sideB } = useSelector(state => state)
 		const route = scroll.route;
-		const show = sideB.show;
 		const dispatch = useDispatch();
 		const handleScrollEvent = (e) => {
 
 			dispatch(changeIndexByScroll(e, loc.pathname));
 		}
-
+		
+		const show = useRef(sideB.show);
+		const nav = useRef(useNavigate());
 		useEffect(() => {
-			!show&&nav(`${route}`,{replace:true}&&dispatch(setReloadingScreen(true)))
-		}, [route, dispatch, nav, show])
+			!show.current&&nav.current(`${route}`,{replace:true}&&dispatch(setReloadingScreen(true)))
+		}, [route, dispatch])
 
 		return (
 				<>
