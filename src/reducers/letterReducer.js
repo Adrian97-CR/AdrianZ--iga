@@ -3,7 +3,8 @@ import { types } from "../types/types";
 
 const initialState = {
     id:'',
-    reload: true
+    reload: true,
+    animation: 'animate__headShake'
 }
 
 export const letterReducer = (state = initialState, action) => {
@@ -14,10 +15,14 @@ export const letterReducer = (state = initialState, action) => {
                 id:action.payload
             }
         case types.setReloadingScreen:
-            console.log(state.reload);
             return {
                 ...state,
                 reload:action.payload
+            }
+        case types.setNewAnimate:
+            return {
+                ...state,
+
             }
         default:
             return state;

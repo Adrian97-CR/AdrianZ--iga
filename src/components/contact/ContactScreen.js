@@ -9,7 +9,8 @@ export const ContactScreen = () => {
         message:''
     });
     const { name, email, subject, message} = formValues;
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
     }
 
     return (
@@ -67,6 +68,11 @@ export const ContactScreen = () => {
                             rows="5"
                             onChange={setFormValues}
                         ></textarea>
+                    </div>
+                    <div className='formbtn'>
+                        <button className='contactBtn'
+                        type='submit'
+                        >Send message!</button>
                     </div>
                 </div>
             </form>

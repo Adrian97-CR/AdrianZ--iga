@@ -11,3 +11,8 @@ export const setReloadingScreen = (state) => ({
     type: types.setReloadingScreen,
     payload: state
 })
+
+export const setNewAnimation = ( anim ) => ({
+    type: types.setNewAnimate,
+    payload: anim
+})

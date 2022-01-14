@@ -1,3 +1,4 @@
+
 .descHm {
    font-family: 'Open Sans';
    font-size: 1.7rem;
@@ -11,8 +12,6 @@
  }
 
  .inputContactContainer {
-   width: 75vw;
-   padding-left: 5%;
    display: grid;
    grid-template-columns: auto auto;
  }
@@ -33,15 +32,6 @@
   grid-column: 1/3;
   padding-inline: 10px;
   position: relative;
-}
- 
-.cont {
-  display: block;
-}
-
-.comp {
-  position: relative;
-  display: block;
 }
 
 .newForm{
@@ -67,4 +57,11 @@
 }
 .contactScreen p {
   font-size: 1.25rem;
+}
+
+.formbtn{
+  grid-column: 2/3;
+  padding-inline: 10px;
+  display: flex;
+  flex-direction: row-reverse;
 }

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { eventSetLetterID, setReloadingScreen } from '../actions/letter';
 import { Letters } from './Letters';
 
-export const ShakeTitle = ({title}) => {
+export const ShakeTitle = ({title, ovc = ''}) => {
     const { id } = useSelector(state => state.letter)
     const dispatch = useDispatch();
     const timerRef = useRef();
@@ -17,9 +17,8 @@ export const ShakeTitle = ({title}) => {
     }, [dispatch])
     useEffect(() => {
         let timer;
-        if (id!='') {
+        if (id!=='') {
             !!timerRef.current&&clearTimeout(timerRef.current)
-            console.log(timer);
             timer = setTimeout(() => {
                 dispatch(eventSetLetterID(''))
             }, 1500);
@@ -61,10 +60,10 @@ export const ShakeTitle = ({title}) => {
                     i += 2;
                     Letters.push(getLetters(title[i], i))
                 }
-                shakeTitle.push(<div key={i} className='concatRow' >{Letters}</div>)
+                shakeTitle.push(<div key={i} className={`concatRow ${(i===0&&ovc)}`} >{Letters}</div>)
                 continue;
             }
-            shakeTitle.push(<div key={i} >{Letters}</div>)
+            shakeTitle.push(<div key={i} className={`${(i===0&&ovc)}`}>{Letters}</div>)
         }
         return shakeTitle;
     }

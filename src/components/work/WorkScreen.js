@@ -1,10 +1,38 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
+import { useDispatch } from 'react-redux';
+import { eventSetLetterID, setNewAnimation } from '../../actions/letter';
+import { ShakeTitle } from '../../letters/ShakeTitle'
 
-export const WorkScreen = () => {
+const title = ['My works', 'Coming soon...'];
+export const WorkScreen = ( ) => {
+    
+   const dispatch = useDispatch();
+   useLayoutEffect(() => {
+       let i = -1;
+       let j = 0;
+       dispatch(setNewAnimation('animate__shakeY'));
+       const event = setInterval(() => {
+           if (i!==-1) {
+               if (i === title[j].length) {
+                   i=0;
+                   j++;
+                   console.log(title.length);
+                   if (j === title.length) {
+                       j=0;
+                   }
+               }
+               title[j][i] === ' '&&i++;
+               dispatch(eventSetLetterID(`${j}${i}`));
+           }
+            i++;
+       },1000)
+       return () => {
+        clearInterval(event)
+       }
+   }, [dispatch])
     return (
-        <div>
-            <h1>WorkScreen</h1>
-            <hr/>           
+        <div className='homeContainer animate__animated '>
+            <ShakeTitle ovc={'overRideColor'} title={[...title]} />
         </div>
     )
 }
