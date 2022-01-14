@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom';
 import { changeSideBState } from '../../actions/navbar';
+import logo from '../../assets/A.png'
 
 export const Sidebar = () => {
    const dispatch = useDispatch();
@@ -19,8 +20,9 @@ export const Sidebar = () => {
                     >
                     <div className='sbHomeCont'>
                         <img
+                        alt=''
                             className='navIcon img-responsive'
-                            src='../assets/A.png'
+                            src={logo}
                         />
                         <span className='sbNamelogo'>Adrián Zúñiga</span>
                         <span className='descSb'>Full-Stack Developer</span>
@@ -61,14 +63,14 @@ export const Sidebar = () => {
                <div className="w-100 footer justify-content-center ">
                    <ul className="padding-">
                        <li className='footIcons'>
-                            <a className="fab fa-youtube" href='https://www.youtube.com/' target={'_blank'}></a>
+                            <a className="fab fa-youtube" href='https://www.youtube.com/' target={'_blank'} rel="noreferrer" > </a>
                             {/* <a className="fab fa-youtube" href='https://www.youtube.com/channel/UCiTxBLbRhfKh8-Hwbj7cMAQ'></a> */}
                        </li>
                        <li className='footIcons'>
-                           <a className="fab fa-linkedin" href='https://www.linkedin.com/in/adrian97-cr/' target={'_blank'}></a>
+                           <a className="fab fa-linkedin" href='https://www.linkedin.com/in/adrian97-cr/' target={'_blank'} rel="noreferrer" > </a>
                        </li>
                        <li className='footIcons'>
-                            <a className="fab fa-github" href='https://github.com/Adrian97-CR' target={'_blank'}></a>
+                            <a className="fab fa-github" href='https://github.com/Adrian97-CR' target={'_blank'} rel="noreferrer" > </a>
                        </li>
                        
                    </ul>

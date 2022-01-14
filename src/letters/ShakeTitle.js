@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { eventSetLetterID, setReloadingScreen } from '../actions/letter';
 import { Letters } from './Letters';
-
+import logo from '../assets/A.png'
 export const ShakeTitle = ({title, ovc = ''}) => {
     const { id } = useSelector(state => state.letter)
     const dispatch = useDispatch();
@@ -43,8 +43,9 @@ export const ShakeTitle = ({title, ovc = ''}) => {
                     <div className='letIcon  animate__animated animate__jackInTheBox'
                         key={`${i}`}>
                         <img
+                            alt=''
                             className='img img-responsive'
-                            src='../assets/A.png'
+                            src={logo}
                         />
                     </div>
                     // <div
