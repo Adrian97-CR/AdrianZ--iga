@@ -1,5 +1,6 @@
 
 .sidebar {
+   text-align: center;
    height: 100%;
    width: 0;
    position: fixed;
@@ -28,4 +29,45 @@
    .sidebar a {font-size: 18px;}
  }
 
+ .sbHomeCont {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   padding-bottom: 10vh
+ }
+ .sbNamelogo {
+  color: #fff;
+  margin-top: 1px;
+  font-size: 2.2rem;
+  font-weight: bold;
+ }
 
+
+ 
+.iconSize {
+  width: 30px;
+  height: 30px;
+}
+.logoSideB{
+  text-align: center;
+}
+
+.navIcon {
+  height: 65px;
+  margin-right: 10px;
+}
+.descSb {
+  font-family: 'Open Sans';
+  font-size: 1rem;
+}
+
+.footIcons {
+  color:#818181;
+  font-size: 30px;
+  display: inline-flex;
+  padding-inline: 5px;
+}
+
+.padding- {
+  padding-inline-start: 0px;
+}

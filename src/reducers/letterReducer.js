@@ -17,7 +17,7 @@ export const letterReducer = (state = initialState, action) => {
             console.log(state.reload);
             return {
                 ...state,
-                reload:!state.reload
+                reload:action.payload
             }
         default:
             return state;

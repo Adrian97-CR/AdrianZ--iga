@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useLayoutEffect } from 'react'
 import { useDispatch } from 'react-redux';
 import { setReloadingScreen } from '../actions/letter';
 import { Letters } from './Letters';
@@ -6,9 +6,9 @@ import { Letters } from './Letters';
 export const ShakeTitle = ({title}) => {
     
     const dispatch = useDispatch();
-    useEffect(() => {
+    useLayoutEffect(() => {
         const timer = setTimeout(() => {
-            dispatch(setReloadingScreen())
+            dispatch(setReloadingScreen(false))
           }, 1000);
         return () => {
             clearTimeout(timer);

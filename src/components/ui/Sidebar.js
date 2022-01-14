@@ -1,41 +1,55 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom';
+import { changeSideBState } from '../../actions/navbar';
 
 export const Sidebar = () => {
    const dispatch = useDispatch();
    const { show } = useSelector(state => state.sideB)
-
+    const handleCloseModal = () => {
+        dispatch(changeSideBState())
+    }
    return (
          <div className={'sidebar '+(show?'expandSidebar':'')}>
-            <div  className = {'animate__animated '+(show?'expandSidebar animate__fadeInUp':'')} >
+            <div  className = {'sbCont animate__animated '+(show?'expandSidebar animate__fadeIn':'')} >
                <Link
-                    className="navbar-brand"    
+                    className="navbar-brand homeSideB"    
                     to="/"
                     >
-                   Asociacioness
+                    <div className='sbHomeCont'>
+                        <img
+                            className='navIcon img-responsive'
+                            src='../assets/A.png'
+                        />
+                        <span className='sbNamelogo'>Adrián Zúñiga</span>
+                        <span className='descSb'>Full-Stack Developer</span>
+                    </div>
                </Link>
                <div className="navbar-collapse">
                    <div className="navbar-nav">
                        <NavLink
+                            onClick={handleCloseModal}
                            className={({isActive}) => "nav-item nav-link "+(isActive&&'active')}
                            to="/about"
                            >
                            About
                        </NavLink>
                        <NavLink
+                            onClick={handleCloseModal}
                            className={({isActive}) => "nav-item nav-link "+(isActive&&'active')}
                            to="/myskills"
                            >
                            My Skills
                        </NavLink>
                        <NavLink
+                            onClick={handleCloseModal}
                            className={({isActive}) => "nav-item nav-link "+(isActive&&'active')}
                            to="/work"
                            >
                            Work
                        </NavLink>
                        <NavLink
+                            onClick={handleCloseModal}
                            className={({isActive}) => "nav-item nav-link "+(isActive&&'active')}
                            to="/contact"
                            >
@@ -43,16 +57,19 @@ export const Sidebar = () => {
                        </NavLink>
                    </div>
                </div>
-               <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end ">
-                   <ul className="navbar-nav ml-auto">
-                       <span className='nva-item nav-link text-info'>
-                           Adrian Zúñiga
-                       </span>
-                       <button
-                           className="nav-item nav-link btn"
-                       >
-                           Logout
-                       </button>
+               <div className="w-100 footer justify-content-center ">
+                   <ul className="padding-">
+                       <li className='footIcons'>
+                            <a className="fab fa-youtube" href='https://www.youtube.com/' target={'_blank'}></a>
+                            {/* <a className="fab fa-youtube" href='https://www.youtube.com/channel/UCiTxBLbRhfKh8-Hwbj7cMAQ'></a> */}
+                       </li>
+                       <li className='footIcons'>
+                           <a className="fab fa-linkedin" href='https://www.linkedin.com/in/adrian97-cr/' target={'_blank'}></a>
+                       </li>
+                       <li className='footIcons'>
+                            <a className="fab fa-github" href='https://github.com/Adrian97-CR' target={'_blank'}></a>
+                       </li>
+                       
                    </ul>
                </div>
             </div>

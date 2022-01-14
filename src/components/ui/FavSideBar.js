@@ -10,7 +10,7 @@ export const FavSideBar = () => {
    }
    return (
       <button
-          className='btn fab'
+          className='btn fabBtn'
           onClick={ handleModalState }
       >
          {

@@ -1,45 +1,13 @@
 //@import 'animete.css'
 @import './base/base';
 @import './text/test';
+@import './text/letters';
 @import './components/sidebar';
 
-.tadaLetter {
-    font-size: 500%;
-    display: inline-flex;
-    font: bold;
-    height: 90%;
-    font-weight: 800;
-    margin: 0 0 0 0;
-    font-family: "Open Sans",sans-serif;
-}
-.aboutContainer {
-    padding-top: 15%;
-}
-.lastdivPad{
-    padding-right: 10px;
-}
-.lastLetterPad{
-    padding-right: 2%;
-}
 
-.img {
-    height: 67px;
-    
-}
-.concatRow {
-    display: flex;
-    align-items: center;   
-}
-.whitespace {
-    width: 10px;   
-    padding-right: 14px;
-}
 
-.navIcon {
-    height: 50px;
-}
 
-.fab {
+.fabBtn{
     box-shadow: none !important;
     background-color: #141414;
     color: blanchedalmond;
@@ -50,9 +18,16 @@
     position: fixed;
     right: 25px;
     z-index: 1;
+    line-height: 1;
 }
 
 .iconSize {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
+}
+.sbCont {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

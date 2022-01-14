@@ -7,3 +7,8 @@ body, html, .sidebar {
     color: white!important;
     overflow: hidden!important;
 }
+:root {
+    --animate-duration: 2.5s;
+    --animate-delay: 0s;
+    --animate-repeat: 1;
+}

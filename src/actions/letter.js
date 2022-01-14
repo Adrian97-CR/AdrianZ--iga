@@ -7,6 +7,7 @@ export const eventSetLetterID = (id) => ({
     payload: id
 })
 
-export const setReloadingScreen = () => ({
-    type: types.setReloadingScreen
+export const setReloadingScreen = (state) => ({
+    type: types.setReloadingScreen,
+    payload: state
 })
