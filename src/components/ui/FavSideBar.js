@@ -13,7 +13,12 @@ export const FavSideBar = () => {
           className='btn fab'
           onClick={ handleModalState }
       >
-          <i className='fas fa-plus'></i>
+         {
+            !show
+            ?<i className="fas fa-bars iconSize"></i>
+            :<i className="fas fa-times iconSize"></i>
+
+         }
       </button>
    )
 }

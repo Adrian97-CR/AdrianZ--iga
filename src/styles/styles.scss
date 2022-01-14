@@ -40,8 +40,8 @@
 }
 
 .fab {
-    box-shadow: 0;
-    background-color: black;
+    box-shadow: none !important;
+    background-color: #141414;
     color: blanchedalmond;
     border-radius: 25%;
     top: 25px;
@@ -50,4 +50,9 @@
     position: fixed;
     right: 25px;
     z-index: 1;
+}
+
+.iconSize {
+    width: 30px;
+    height: 30px;
 }

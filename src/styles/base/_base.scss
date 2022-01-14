@@ -2,7 +2,8 @@
 //     --animate-duration: 2s;
 //   }
 
-body, html, Sidebar {
+body, html, .sidebar {
     background-color: #1d1d1d!important;
     color: white!important;
+    overflow: hidden!important;
 }
