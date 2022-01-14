@@ -1,11 +1,12 @@
-import React, { useEffect, useLayoutEffect } from 'react'
-import { useDispatch } from 'react-redux';
-import { setReloadingScreen } from '../actions/letter';
+import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { eventSetLetterID, setReloadingScreen } from '../actions/letter';
 import { Letters } from './Letters';
 
 export const ShakeTitle = ({title}) => {
-    
+    const { id } = useSelector(state => state.letter)
     const dispatch = useDispatch();
+    const timerRef = useRef();
     useLayoutEffect(() => {
         const timer = setTimeout(() => {
             dispatch(setReloadingScreen(false))
@@ -14,7 +15,17 @@ export const ShakeTitle = ({title}) => {
             clearTimeout(timer);
         }
     }, [dispatch])
-
+    useEffect(() => {
+        let timer;
+        if (id!='') {
+            !!timerRef.current&&clearTimeout(timerRef.current)
+            console.log(timer);
+            timer = setTimeout(() => {
+                dispatch(eventSetLetterID(''))
+            }, 1500);
+            timerRef.current = timer;
+        }
+    }, [id, dispatch])
     const getLetters = ( word, i) => (
             word.split('').map((l, j) => (
                 <Letters

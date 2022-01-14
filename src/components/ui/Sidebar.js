@@ -13,6 +13,7 @@ export const Sidebar = () => {
          <div className={'sidebar '+(show?'expandSidebar':'')}>
             <div  className = {'sbCont animate__animated '+(show?'expandSidebar animate__fadeIn':'')} >
                <Link
+                    onClick={handleCloseModal}
                     className="navbar-brand homeSideB"    
                     to="/"
                     >

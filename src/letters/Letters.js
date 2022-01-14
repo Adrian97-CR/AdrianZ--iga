@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { eventSetLetterID } from '../actions/letter'
 
@@ -8,13 +8,14 @@ export const Letters = ({i, j, l}) => {
 	const handleHover = (id) => {
 		dispatch(eventSetLetterID(id));
 	}
+	
 	return (
 		l!==' '
 		?
 			<h1
 				className={
 					'tadaLetter animate__animated '
-					+ (id===`${i}${j}`?'animate__headShake ':'')
+					+ (id===`${i}${j}`?'animate__headShake lettcolor':'')
 					+ (reload?'animate__jackInTheBox ':'')}
 				onMouseEnter={(e) => (handleHover(`${i}${j}`))}
 				>{l}

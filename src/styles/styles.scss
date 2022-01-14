@@ -1,6 +1,7 @@
 //@import 'animete.css'
 @import './base/base';
 @import './text/test';
+@import './text/text';
 @import './text/letters';
 @import './components/sidebar';
 
@@ -21,13 +22,55 @@
     line-height: 1;
 }
 
+.csCont {
+  padding-top: 35%;
+  padding-left: 25%;
+}
+
+
 .iconSize {
   width: 30px;
   height: 30px;
 }
-.sbCont {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+
+.contactBtn {
+  color: #08fdd8;
+  background: transparent;
+  border-color: #08fdd8;
+  border-width: 3px;
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-family: "Open Sans";
+  text-decoration: none;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 220px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+
+  -webkit-transition: 0.3s ease-out all;
+  -o-transition: 0.3s ease-out all;
+  transition: 0.3s ease-out all;
+
+   &:hover {
+    background-color: #08fdd8;
+    color: #141414;
+    z-index: 5;
+  }
+}
+
+
+.contactScreen {
+  padding-top: 13%;
+}
+
+.scrTitle{
+  color: #08fdd8;
+  font-size: 80px;
+  font-family: "Open Sans",sans-serif;
+  font-weight: 800;
+  font: bold;
 }

@@ -10,6 +10,7 @@ import { changeIndexByScroll } from '../actions/scrollIndex'
 import { Sidebar } from '../components/ui/Sidebar'
 import { FavSideBar } from '../components/ui/FavSideBar'
 import { setReloadingScreen } from '../actions/letter'
+import { HomeScreen } from '../components/home/HomeScreen'
 
 
 export const DashboardRouter = () => {
@@ -42,11 +43,12 @@ export const DashboardRouter = () => {
 						<Sidebar />
 						<div className="container">
 							<Routes>
+								<Route path="home" element={<HomeScreen  />} />
 								<Route path="about" element={<AboutScreen  />} />
 								<Route path="myskills" element={<SkillsScreen />} />
 								<Route path="work" element={<WorkScreen />} />
 								<Route path="contact" element={<ContactScreen />} />
-								<Route path="/" element={<AboutScreen />} />
+								<Route path="/" element={<HomeScreen />} />
 							</Routes>
 						</div>
 						<FavSideBar />
