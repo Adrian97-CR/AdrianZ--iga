@@ -27,7 +27,7 @@ export const DashboardRouter = () => {
 
 		useEffect(() => {
 			!show&&nav(`${route}`,{replace:true}&&dispatch(setReloadingScreen(true)))
-		}, [route, dispatch])
+		}, [route, dispatch, nav, show])
 
 		return (
 				<>
