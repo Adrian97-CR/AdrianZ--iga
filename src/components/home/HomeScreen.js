@@ -11,7 +11,7 @@ export const HomeScreen = () => {
    useLayoutEffect(() => {
        dispatch(setNewAnimation('animate__shakeY'));
    }, [dispatch])
-    const handleGoContack = () => {
+    const handleGoContact = () => {
         nav('/contact')
     }
    return (
@@ -19,7 +19,7 @@ export const HomeScreen = () => {
                <ShakeTitle title={[...title]} />
                <div className='descHm'><span>Front End Developer / Back End Developer</span></div>
                <button className='contactBtn'
-                    onClick={handleGoContack}
+                    onClick={handleGoContact}
                >Keep in touch?</button>
            </div>
        
