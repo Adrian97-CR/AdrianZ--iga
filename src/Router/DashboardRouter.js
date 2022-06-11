@@ -19,7 +19,6 @@ export const DashboardRouter = () => {
 		const route = scroll.route;
 		const dispatch = useDispatch();
 		const handleScrollEvent = (e) => {
-
 			dispatch(changeIndexByScroll(e, loc.pathname));
 		}
 		

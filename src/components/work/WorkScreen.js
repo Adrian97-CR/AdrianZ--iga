@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { eventSetLetterID, setNewAnimation } from '../../actions/letter';
 import { ShakeTitle } from '../../letters/ShakeTitle'
 
-const title = ['My works', 'Coming soon...'];
+const title = ['My Projects', 'Coming soon...'];
 export const WorkScreen = ( ) => {
     
    const dispatch = useDispatch();

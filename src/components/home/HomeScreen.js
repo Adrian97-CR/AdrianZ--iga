@@ -17,7 +17,7 @@ export const HomeScreen = () => {
    return (
            <div className='homeContainer animate__animated '>
                <ShakeTitle title={[...title]} />
-               <div className='descHm'><span>Front End Developer / Back End Developer</span></div>
+               <div className='descHm'><span>Full-Stack Developer / Mobile Developer</span></div>
                <button className='contactBtn'
                     onClick={handleGoContact}
                >Keep in touch?</button>

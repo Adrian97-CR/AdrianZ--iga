@@ -49,7 +49,7 @@ export const Sidebar = () => {
                            className={({isActive}) => "nav-item nav-link "+(isActive&&'active')}
                            to="/work"
                            >
-                           Work
+                           Projects
                        </NavLink>
                        <NavLink
                             onClick={handleCloseModal}
