@@ -4,13 +4,13 @@ import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
 import { AboutScreen } from '../components/about/AboutScreen'
 import { ContactScreen } from '../components/contact/ContactScreen'
 import { SkillsScreen } from '../components/skills/SkillsScreen'
-import { WorkScreen } from '../components/work/WorkScreen'
 import ReactScrollWheelHandler from "react-scroll-wheel-handler";
 import { changeIndexByScroll } from '../actions/scrollIndex'
 import { Sidebar } from '../components/ui/Sidebar'
 import { FavSideBar } from '../components/ui/FavSideBar'
 import { setReloadingScreen } from '../actions/letter'
 import { HomeScreen } from '../components/home/HomeScreen'
+import { ProjectScreen } from '../components/project/WorkScreen'
 
 
 export const DashboardRouter = () => {
@@ -45,7 +45,7 @@ export const DashboardRouter = () => {
 								<Route path="home" element={<HomeScreen  />} />
 								<Route path="about" element={<AboutScreen  />} />
 								<Route path="myskills" element={<SkillsScreen />} />
-								<Route path="work" element={<WorkScreen />} />
+								<Route path="projects" element={<ProjectScreen />} />
 								<Route path="contact" element={<ContactScreen />} />
 								<Route path="/" element={<HomeScreen />} />
 							</Routes>

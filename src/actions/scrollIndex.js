@@ -1,6 +1,6 @@
 import { types } from "../types/types";
 
-const routs = ['/home','/about', '/myskills', '/work', '/contact'];
+const routs = ['/home','/about', '/myskills', '/projects', '/contact'];
 
 export const changeIndexByScroll = (scroll, path) => {
    let pos = routs.findIndex((r) => (r===(path==='/'?'/home':path)));
