@@ -3,5 +3,6 @@ export const types = {
     setReloadingScreen: '[letter] change polarity',
     sideBOpenClose: '[sideB] cambiar polaridad',
     setNewScrollIndex: '[scroll] Set New Rout Index',
-    setNewAnimate: '[letter] set new animation'
+    setNewAnimate: '[letter] set new animation',
+    setDisableScroll: '[scroll] set disable scroll',
 }

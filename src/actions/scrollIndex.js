@@ -10,3 +10,8 @@ export const changeIndexByScroll = (scroll, path) => {
       payload: (!!routs[pos+dir]?routs[pos+dir]:routs[pos])
    })
 }
+
+export const setScrollState = (state) => ({
+   type: types.setDisableScroll,
+   payload: state
+})
