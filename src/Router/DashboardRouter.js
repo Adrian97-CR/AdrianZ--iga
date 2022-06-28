@@ -11,6 +11,7 @@ import { FavSideBar } from '../components/ui/FavSideBar'
 import { setReloadingScreen } from '../actions/letter'
 import { HomeScreen } from '../components/home/HomeScreen'
 import { ProjectScreen } from '../components/project/ProjectScreen'
+import {isBrowser } from 'react-device-detect';
 
 
 export const DashboardRouter = () => {
@@ -41,10 +42,11 @@ export const DashboardRouter = () => {
 					}}
 					> 
 					<Sidebar />
+					{isBrowser&&<div style={float}>asdf</div>}
 					<div className="container">
 						<Routes>
-							<Route path="home" element={<HomeScreen  />} />
-							<Route path="about" element={<AboutScreen  />} />
+							<Route path="home" element={<HomeScreen />} />
+							<Route path="about" element={<AboutScreen />} />
 							<Route path="myskills" element={<SkillsScreen />} />
 							<Route path="projects" element={<ProjectScreen />} />
 							<Route path="contact" element={<ContactScreen />} />
@@ -55,4 +57,11 @@ export const DashboardRouter = () => {
 				</ReactScrollWheelHandler>
 			</> 
 		)
+}
+const float = {
+	position:'absolute',
+	justifyContent: 'center',
+	alignItems:'center',
+	right:'20px',
+	top:'50%'
 }

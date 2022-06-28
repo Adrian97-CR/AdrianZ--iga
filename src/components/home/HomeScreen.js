@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setNewAnimation } from '../../actions/letter';
 import { ShakeTitle } from '../../letters/ShakeTitle';
+import {isBrowser } from 'react-device-detect';
 
 export const HomeScreen = () => {
 	const title = ['Hi,', 'Im ', false,'drián Zúñiga', 'Computer engineer'];
@@ -19,6 +20,7 @@ export const HomeScreen = () => {
 			<ShakeTitle title={[...title]} />
 			<div className='descHm'><span>Full-Stack Developer / Mobile Developer</span></div>
 			<button className='contactBtn' onClick={handleGoContact}>Keep in touch?</button>
+		 	{!isBrowser&&<div style={{color:'white'}}>asdf</div>}
 		</div>
 )}
 
