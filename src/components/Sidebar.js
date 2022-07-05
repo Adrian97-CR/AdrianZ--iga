@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, NavLink } from 'react-router-dom';
-import { changeSideBState } from '../../actions/navbar';
-import logo from '../../assets/A.png'
+import { changeSideBState } from '../actions/navbar';
+import logo from '../assets/A.png'
 
 export const Sidebar = () => {
    const dispatch = useDispatch();

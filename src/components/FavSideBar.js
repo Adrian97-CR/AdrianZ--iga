@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { changeSideBState } from '../../actions/navbar'
+import { changeSideBState } from '../actions/navbar'
 
 export const FavSideBar = () => {
    const { show } = useSelector(state => state.sideB);

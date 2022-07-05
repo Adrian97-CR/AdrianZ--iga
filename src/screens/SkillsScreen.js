@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from 'react'
 import { useDispatch } from 'react-redux';
-import { eventSetLetterID, setNewAnimation } from '../../actions/letter';
-import { ShakeTitle } from '../../letters/ShakeTitle'
+import { eventSetLetterID, setNewAnimation } from '../actions/letter';
+import { ShakeTitle } from '../letters/ShakeTitle'
 
 const title = ['My Skills', 'Coming soon...'];
 export const SkillsScreen = ( ) => {
