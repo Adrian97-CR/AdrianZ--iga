@@ -224,6 +224,7 @@ padding-top: 13%;
 .lettcolor {
 	color:#08fdd8;
 }
+
 .homeContainer {
 	padding-top: 15%;
 }
@@ -250,12 +251,16 @@ padding-top: 13%;
 .overRideColor{
 	color: #fd2155;
 }
-
+* {user-select:none;}
 
 body, html, .sidebar {
 	background-color: #1d1d1d!important;
 	color: white!important;
 	overflow: hidden!important;
+}
+h1 {
+	cursor: default;
+	
 }
 :root {
 	--animate-duration: 2.5s;

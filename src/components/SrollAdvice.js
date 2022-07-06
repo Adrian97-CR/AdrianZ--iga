@@ -6,16 +6,30 @@ export const SrollAdvice = () => {
 
    return (
       <div style={float}>
-         <div id="arrowAnim">
-            <div class="arrowSliding">
-               <div class="arrow"></div>
+         <div style={{justifyContent:'space-evenly', width:'150px'}}>
+            <div id="arrowAnim">
+               <div className="arrowSliding">
+                  <div className="arrow"></div>
+               </div>
+               <div className="arrowSliding delay1">
+                  <div className="arrow"></div>
+               </div>
+               <div className="arrowSliding delay2">
+                  <div className="arrow"></div>
+               </div>
             </div>
-            <div class="arrowSliding delay1">
-               <div class="arrow"></div>
+            <div id="arrowAnim2">
+               <div className="arrowSliding">
+                  <div className="arrow"></div>
+               </div>
+               <div className="arrowSliding delay1">
+                  <div className="arrow"></div>
+               </div>
+               <div className="arrowSliding delay2">
+                  <div className="arrow"></div>
+               </div>
             </div>
-            <div class="arrowSliding delay2">
-               <div class="arrow"></div>
-            </div>
+            <div>asdf</div>
          </div>
       </div>
    )
@@ -23,7 +37,7 @@ export const SrollAdvice = () => {
 const float = {
 	position:'absolute',
 	justifyContent: 'center',
-	alignItems:'center',
-	right:'20px',
+	alignItems:'space-around',
+	right:'160px',
 	top:'50%'
 }
